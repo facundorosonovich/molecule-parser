@@ -1,3 +1,6 @@
+"""
+    Atom manipulation module
+"""
 from re import compile as compile_regex
 
 EXTRACT_ATOMS_REGEX = r"[A-Z][a-z]*"

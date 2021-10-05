@@ -1,5 +1,5 @@
 """
-    This module provide some utils
+    Utils module
 """
 import logging
 

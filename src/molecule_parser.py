@@ -1,3 +1,6 @@
+"""
+    Parse molecule module
+"""
 import logging
 
 

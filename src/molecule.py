@@ -1,5 +1,5 @@
 """
-    This module provide access to Molecule manipulation
+    Molecule manipulation module
 """
 import logging
 from re import compile as compile_regex
