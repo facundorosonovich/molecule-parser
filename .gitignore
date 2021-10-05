@@ -1,6 +1,3 @@
 .pytest_cache
 .env
-.vscode
-.coverage
-coverage.xml
 .idea
