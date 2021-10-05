@@ -7,7 +7,8 @@ from src.atom import concat_atoms
 
 def parse_molecule(molecule):
     """
-    Parses the molecule equation and returns a dictionary counting the number of atoms of each element.
+    Parses the molecule equation and returns a dictionary
+    counting the number of atoms of each element.
     :param molecule: String
     :return: Dictionary
     """
@@ -15,5 +16,4 @@ def parse_molecule(molecule):
     flatten_molecule = flatten_all(molecule)
     logging.info("Parsing the flatted molecule")
     atoms = concat_atoms(flatten_molecule)
-    logging.info(atoms)
     return atoms

@@ -24,7 +24,7 @@ def __exception_and_replicate_flatten_molecule(match):
     begin_enclosure, flatten_molecule, end_enclosure, multiplier = match.groups()
 
     if enclosures[begin_enclosure] != end_enclosure:
-        logging.error("Something went wrong -> Parsing error", match)
+        logging.error("Something went wrong -> Parsing error ")
         raise EnclosureException("Something went wrong -> Parsing error", match)
 
     logging.info("Applying replicate_pattern")

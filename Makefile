@@ -1,9 +1,3 @@
-coverage:
-	pipenv run pytest --cov-report=xml --cov=src tests/
-
-format:
-	pipenv run black src tests
-
 lint:
 	pipenv run pylint src
 
