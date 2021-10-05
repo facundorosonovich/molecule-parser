@@ -6,14 +6,13 @@ jobs:
     steps:
       - checkout
       - run: sudo pip install --upgrade pip
-      - run: sudo pip install 'pipenv==2018.11.26' codecov
+      - run: sudo pip install 'pipenv==2018.11.26'
       - restore_cache:
           key: 'dependency-cache-{{ .Branch }}-{{ checksum "Pipfile.lock" }}'
       - run:
           name: Install dependencies
           command: pipenv install --dev
-      - run: make coverage
-      - run: codecov -t $CODECOV_TOKEN || echo 'Sending coverage failed'
+      - run: make test
 
 
 workflows:
