@@ -14,6 +14,12 @@ jobs:
           command: pipenv install --dev
       - run: make test
 
+      - store_test_results: # Upload test results for display in Test Summary
+          path: test-results
+      - store_artifacts: # Upload test summary for display in Artifacts
+          path: test-results
+          destination: tr1
+
 
 workflows:
   version: 2
