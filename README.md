@@ -41,7 +41,7 @@ Assuming Google Chrome and Git installed:
 ```bash
 # install python 3.9 (skip if already installed)
 brew  install python
-brew  install  pippenv
+brew  install  pipenv
 # clone the repo
 git clone git@github.com:facundorosonovich/molecule-parser.git
 cd molecule-parser

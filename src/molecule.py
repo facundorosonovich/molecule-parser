@@ -33,7 +33,7 @@ def __exception_and_replicate_flatten_molecule(match):
 
 def __molecule_match():
     """
-    Lambda function to concat the pattern to the total provided
+    Lambda function to concat the pattern to the total provided.
     :return: lambda
     """
     return lambda match: replicate_pattern(match[1], match[2])
@@ -51,26 +51,26 @@ def flatten(molecule):
 
 def flatten_sub_molecule(flatten_molecule):
     """
-    Same as flatten but works on sub-molecules (within enclosures)
+    Same as flatten but works on sub-molecules (elements within enclosures).
     ex: K4(SO3) => K4(SOOO)
     """
 
-    last_flatten_molecule = ""
-    new_flatten_molecule = flatten_molecule
+    last_molecule = ""
+    new_molecule = flatten_molecule
 
-    while last_flatten_molecule != new_flatten_molecule:
-        last_flatten_molecule = new_flatten_molecule
-        new_flatten_molecule = sub_flatten_molecule_regex.sub(
+    while last_molecule != new_molecule:
+        last_molecule = new_molecule
+        new_molecule = sub_flatten_molecule_regex.sub(
             __exception_and_replicate_flatten_molecule,
-            last_flatten_molecule,
+            last_molecule,
         )
 
-    return new_flatten_molecule
+    return new_molecule
 
 
 def flatten_all(molecule):
     """
-    Flatten the whole molecule dealing with sub-molecules (subwithin enclosures)
+    Flatten the whole molecule.
     """
 
     return flatten_sub_molecule(flatten(molecule))
