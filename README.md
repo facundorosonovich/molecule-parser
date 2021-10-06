@@ -1,7 +1,9 @@
 
 ## Subject
 
-Note: language to use: Python
+<p align="center">
+  <img src="images/molecule.jpeg" width="250" height="250"/>
+</p>
 
 For a given chemical formula represented by a string, count the number of atoms of each element contained in the molecule and return a dict.
 
@@ -31,3 +33,82 @@ Note that brackets may be round, square or curly and can also be nested. Index a
 Send us your work in an archive, in private gist file(s) or using another private solution.
 
 Make it ready for production ;)
+
+## Quickstart
+
+Assuming Google Chrome and Git installed:
+
+```bash
+# install python 3.9 (skip if already installed)
+brew  install python
+brew  install  pippenv
+# clone the repo
+git clone git@github.com:facundorosonovich/molecule-parser.git
+cd molecule-parser
+# install dependencies
+pipenv install --dev
+# run the tests
+pipenv run pytest -s
+```
+
+## Developer Installation
+
+To install the dependencies we use *brew*. You can install it from here: <https://brew.sh/>
+
+### 1. Install git
+
+```bash
+brew install git
+```
+
+### 2. Install Python 3.8
+
+```bash
+brew install python@3.8
+```
+if you get an error (Error: Unknown command: cask) try with:
+
+
+
+Test that python 3.8 is correctly installed with
+
+```bash
+python --version
+```
+
+If it was correctly installed you should see something like
+
+ ```bash
+Python 3.8.8
+(base) ________________________________________________________________________________
+```
+
+### 3. Install Pipenv
+
+```bash
+brew install pipenv
+```
+
+### 4. Install PyCharm CE
+
+PyCharm CE can be installed from the jetbrains website: <https://www.jetbrains.com/pycharm/download/#section=mac>  
+It can also be installed using brew:
+
+```bash
+brew cask install pycharm-ce
+```
+
+For latest brew versions, please use
+
+```bash
+brew install --cask pycharm-ce
+```
+
+
+## Executing the test
+To run the demo test
+```bash
+pipenv run pytest -s tests/test_molecule_parser.py
+
+```
+
